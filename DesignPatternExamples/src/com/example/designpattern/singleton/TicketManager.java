@@ -1,7 +1,8 @@
 package com.example.designpattern.singleton;
 
 public class TicketManager {
-	private static TicketManager instance;
+	private static final TicketManager TicketManager = new TicketManager();
+	private static TicketManager instance = new TicketManager();
 	
 	private TicketManager() { // private constructor
 		count = 0;
