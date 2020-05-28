@@ -8,15 +8,12 @@ public class TicketManager {
 	}
 	
 	public static TicketManager getInstance() {
-		if (instance == null) {
-			instance = new TicketManager();
-		}
-		return instance;
+		return TicketManager;
 	}
 	
 	static int count;
 	
-	public Ticket sellTicket() {
+	public synchronized static Ticket sellTicket() {
 		return new Ticket(count++);
 	}
 }
