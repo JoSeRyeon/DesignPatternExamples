@@ -6,7 +6,8 @@ public class Main {
 		
 		ClassA arr[] = new ClassA[] {
 				new ClassA(),
-				new ClassBAdapter()
+				new ClassBAdapter(),
+			        new ClassCAdapter()
 		};
 		
 		Client.request(arr);
