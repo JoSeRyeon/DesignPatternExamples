@@ -9,6 +9,9 @@ public class ElevatorFactoryFactory {
 			
 		case Hyundai:
 			return new HyundaiElevatorFactory();
+				
+		case Samsung:
+			return new SamsungElevatorFactory();
 			
 		default:
 			return null;
