@@ -5,11 +5,13 @@ public class Client {
 		Body body = new Body();
 		Keyboard keyboard = new Keyboard();
 		Monitor monitor = new Monitor();
+		Headset headset = new Headset();
 
 		Computer computer = new Computer();
 		computer.addComponent(body);
 		computer.addComponent(keyboard);
 		computer.addComponent(monitor);
+		computer.addComponent(headset);
 
 		System.out.println(computer.getPrice());
 		System.out.println(computer.getPower());
