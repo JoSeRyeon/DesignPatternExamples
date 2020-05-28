@@ -1,5 +1,5 @@
 package com.example.designpattern.abstractfactory;
 
-public class Samsung {
+public class SamsungDoor {
 
 }
