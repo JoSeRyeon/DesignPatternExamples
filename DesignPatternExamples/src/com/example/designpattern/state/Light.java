@@ -2,6 +2,7 @@ package com.example.designpattern.state;
 
 public class Light {
 	private State state;
+	private static final int SLEEP = 2;
 	
 	public Light() {
 		state = new OFF();
@@ -16,11 +17,19 @@ public class Light {
 	}
 
 	public void on_button() {
-		state.on_button(this);;
+		if(state == ON){
+			state = SLEEP;}
+		else if(state == SLEEP) {
+			state = ON; }
+		else { state = ON;}
 	}
 	
 	public void off_button() {
-		state.off_button(this);
+		if(state == ON){
+			state = OFF;}
+		else if(state == SLEEP) {
+			state = OFF; }
+		else {}
 	}
 }
 
@@ -34,3 +43,4 @@ public class Light {
 // 상태 패턴을 적용한 예제에서도 SLEEP 상태를 추가해보시오.
 // 각각 어느 부분을 변경해야하고 어느 부분을 변경하지 않아도 되는지 비교하여
 //  상태 패턴의 장점을 설명하시오. 
+// 새로운 상태가 추가가 되어도 변경사항이 크지 않다.
