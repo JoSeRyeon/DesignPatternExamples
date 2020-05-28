@@ -11,8 +11,10 @@ public class Main {
 			}
 			else if ("Hyundai".equalsIgnoreCase(arg)) {
 				vendorId = VendorID.Hyundai;
-			} 
-
+			}
+			else if ("Samsung".equalsIgnoreCase(arg)) {
+				vendorId = VendorID.Samsung;
+			}
 			else  {
 				vendorId = null;
 			}
