@@ -2,7 +2,6 @@ package com.example.designpattern.state;
 
 public class Light {
 	private State state;
-	private static final int SLEEP = 2;
 	
 	public Light() {
 		state = new OFF();
@@ -17,19 +16,11 @@ public class Light {
 	}
 
 	public void on_button() {
-		if(state == ON){
-			state = SLEEP;}
-		else if(state == SLEEP) {
-			state = ON; }
-		else { state = ON;}
+		state.on_butoon(this);
 	}
 	
 	public void off_button() {
-		if(state == ON){
-			state = OFF;}
-		else if(state == SLEEP) {
-			state = OFF; }
-		else {}
+		state.off_button(this);
 	}
 }
 
